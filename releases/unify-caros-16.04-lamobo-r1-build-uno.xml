@@ -71,5 +71,6 @@ IMAGE_INSTALL_append = " un-orchestrator uno-demo-config carosadm "
 		<reposync />
 		<bitbake_target>-c cleanall un-orchestrator uno-demo-config core-image-unify</bitbake_target>
 		<bitbake_target>core-image-unify</bitbake_target>
+		<bitbake_target>mariadb mysql-python python-virtualenv libffi</bitbake_target>
 	</buildstage>
 </redo>
