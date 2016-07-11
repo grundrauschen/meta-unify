@@ -4,7 +4,7 @@
 
 		<remote baseurl="git://git.yoctoproject.org/" name="yocto"   />
 		<remote baseurl="git://github.com/carosio/" name="carosio"   />
-		<remote baseurl="git://github.com/wfailla/" name="wf"   />
+		<remote baseurl="git://github.com/grundrauschen/" name="tf"   />
 		<remote baseurl="git://github.com/openembedded/" name="openembedded"/>
 
 		<baselayer
@@ -25,7 +25,7 @@
 		<layer name="meta-unify"
 			repo="meta-unify"
 			revision="262e8200bb589b18ec18537cf2f706590945e11e"
-			remote="wf" />
+			remote="tf" />
 
 		<layer name="meta-openembedded"
 			repo="meta-openembedded"
