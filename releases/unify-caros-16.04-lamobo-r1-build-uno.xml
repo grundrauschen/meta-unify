@@ -53,7 +53,7 @@ RDEPENDS_packagegroup-caros_remove = "unimux"
 
 RDEPENDS_packagegroup-caros-erlang_remove = "erlang-hello"
 
-IMAGE_INSTALL_append = " un-orchestrator uno-demo-config carosadm "
+IMAGE_INSTALL_append = " un-orchestrator uno-demo-config carosadm virtualizer "
 ]]>
 	</local_conf>
 
@@ -71,6 +71,13 @@ IMAGE_INSTALL_append = " un-orchestrator uno-demo-config carosadm "
 		<reposync />
 		<bitbake_target>-c cleanall un-orchestrator uno-demo-config core-image-unify</bitbake_target>
 		<bitbake_target>core-image-unify</bitbake_target>
-		<bitbake_target>mariadb mysql-python python-virtualenv libffi</bitbake_target>
+        <!--<bitbake_target>mariadb mysql-python python-virtualenv libffi</bitbake_target>-->
 	</buildstage>
+
+    <buildstage id="030-build-virtualizer">
+        <prestage>020-build-core-image</prestage>
+        <reposync />
+        <action>RUN apt-get install -y python-virtualenv</action>
+        <bitbake_target>virtualizer</bitbake_target>
+    </buildstage>
 </redo>
